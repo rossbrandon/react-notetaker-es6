@@ -1,20 +1,22 @@
-var React = require('react');
-var Router = require('react-router');
+import React from 'react'
+var Router = require('react-router')
+// Don't think I can use ES2015 here because of history module dependency
+//import Router from 'react-router'
 
 var SearchGithub = React.createClass({
     mixins: [Router.History],
 
-    getRef: function(ref) {
-        this.usernameRef = ref;
+    getRef(ref) {
+        this.usernameRef = ref
     },
 
-    handleSubmit: function() {
-        var username = this.usernameRef.value;
-        this.usernameRef.value = '';
-        this.history.pushState(null, "/profile/" + username);
+    handleSubmit() {
+        var username = this.usernameRef.value
+        this.usernameRef.value = ''
+        this.history.pushState(null, `/profile/${username}`)
     },
 
-    render: function() {
+    render() {
         return (
             <div className="col-sm-12">
                 <form onSubmit={this.handleSubmit}>
@@ -28,7 +30,6 @@ var SearchGithub = React.createClass({
             </div>
         )
     }
+})
 
-});
-
-module.exports = SearchGithub;
+export default SearchGithub

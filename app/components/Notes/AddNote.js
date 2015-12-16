@@ -1,4 +1,4 @@
-var React = require('react');
+import React from 'react'
 
 var AddNote = React.createClass({
     propTypes: {
@@ -6,17 +6,17 @@ var AddNote = React.createClass({
         addNote: React.PropTypes.func.isRequired
     },
 
-    setRef: function(ref) {
+    setRef(ref) {
         this.note = ref;
     },
 
-    handleSubmit: function() {
+    handleSubmit() {
         var newNote = this.note.value;
         this.note.value = '';
         this.props.addNote(newNote);
     },
 
-    render: function() {
+    render() {
         return (
             <div className="input-group">
                 <input type="text" className="form-control" placeholder="Add New Note" ref={this.setRef} />
@@ -26,6 +26,6 @@ var AddNote = React.createClass({
             </div>
         )
     }
-});
+})
 
-module.exports = AddNote;
+export default AddNote;

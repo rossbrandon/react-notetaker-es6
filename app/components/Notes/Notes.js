@@ -1,6 +1,6 @@
-var React = require('react');
-var NotesList = require('./NotesList');
-var AddNote = require('./AddNote');
+import React from 'react'
+import NotesList from './NotesList'
+import AddNote from './AddNote'
 
 var Notes = React.createClass({
     propTypes: {
@@ -9,7 +9,7 @@ var Notes = React.createClass({
         addNote: React.PropTypes.func.isRequired
     },
 
-    render: function() {
+    render() {
         return (
             <div>
                 <h3>Notes for {this.props.username}</h3>
@@ -20,4 +20,4 @@ var Notes = React.createClass({
     }
 });
 
-module.exports = Notes;
+export default Notes;
