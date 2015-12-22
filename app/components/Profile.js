@@ -48,7 +48,7 @@ class Profile extends React.Component {
 
     handleAddNote(newNote) {
         base.post(this.props.params.username, {
-            data: this.state.notes.concate([newNote])
+            data: this.state.notes.concat([newNote])
         })
     }
 
