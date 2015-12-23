@@ -24263,7 +24263,7 @@
 	    }, {
 	        key: 'init',
 	        value: function init(username) {
-	            this.ref = base.bindToState(this.props.params.username, {
+	            this.ref = base.bindToState(username, {
 	                context: this,
 	                asArray: true,
 	                state: 'notes'
@@ -24280,7 +24280,7 @@
 	        key: 'handleAddNote',
 	        value: function handleAddNote(newNote) {
 	            base.post(this.props.params.username, {
-	                data: this.state.notes.concate([newNote])
+	                data: this.state.notes.concat([newNote])
 	            });
 	        }
 	    }, {

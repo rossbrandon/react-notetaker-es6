@@ -31,7 +31,7 @@ class Profile extends React.Component {
     }
 
     init(username) {
-        this.ref = base.bindToState(this.props.params.username, {
+        this.ref = base.bindToState(username, {
             context: this,
             asArray: true,
             state: 'notes'
